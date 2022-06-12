@@ -1,0 +1,233 @@
+body {
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #1F2937;
+    color: #eee;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 64px;
+    /* flex: 1; */
+}
+
+.header-logo {
+    color: #eee;
+    justify-self: flex-start;
+}
+
+.links {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+a {
+    color: #E5E7EB;
+    text-decoration: none;
+    padding-left: 15px;
+  }
+
+ul {
+    list-style: none;
+}
+
+.top {
+    display: flex;
+    background-color: #1F2937;
+    color: #eee;
+    min-height: 300px;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 0 64px;
+    /* gap: 20px; */
+}
+
+.top-left {
+    display: flex;
+    flex-flow: column wrap;
+    width: 65%;
+    /* padding: 0 64px; */
+    min-height: 300px;
+    flex-shrink: 1;
+    justify-content: center;
+}
+
+.top-right {
+    display: flex;
+    width: 300px;
+    /* padding: 0 64px; */
+    justify-content: flex-end;
+    max-height: 300px;
+    flex: 1;
+}
+
+button {
+    width: 100px;
+    padding: 8px;
+    background-color: #3882f6;
+    color: #eee;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: none;
+}
+
+.header-button {
+    border: none;
+}
+
+.header {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+    margin: 0;
+    flex-shrink: 1;
+}
+
+h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hero-img {
+    height: 60%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    /* flex: 1; */
+}
+
+.images {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 30px;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    padding: 15px;
+    flex-shrink: 1;
+}
+
+.img-desc {
+    max-width: 160px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    /* gap: 20px; */
+}
+
+.img {
+    width: 110px;
+    height: 110px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    border: #3882f6 solid 2px;
+    border-radius: 5px;
+}
+
+.blues {
+    background-image: url(./images/blues_watch_party.jpg);
+}
+
+.botanical {
+    background-image: url(./images/botanical_gardens.jpg);
+}
+
+.lake {
+    background-image: url(./images/creve_coeur_lake.JPG);
+}
+
+.park {
+    background-image: url(./images/forest_park_autumn.jpg);
+}
+
+.img-desc span {
+    color: #919191;
+    font-size: 18px;
+    width: 110px;
+    text-align: center;
+    padding: 8px;
+}
+
+.quote {
+    background-color: #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 110px;
+    
+}
+
+.quote p {
+    font-size: 36px;
+    font-weight: 100;
+    font-style: italic;
+    color: #1F2937;
+    flex-shrink: 1;
+    margin: 0;
+    
+}
+
+.quote span {
+    font-size: 18px;
+    align-self:flex-end;
+    font-weight: 500;
+    color: #1F2937;
+    flex-shrink: 1;
+    padding: 10px;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    min-height: 250px;
+}
+
+.signup-box {
+    width: 85%;
+    background-color: #3882f6;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.signup-left h3{
+    margin: 0;
+    font-size: 18px;
+}
+
+.signup-button {
+    border: #eee 2px solid;
+    justify-self: flex-end;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #1F2937;
+    color: #eee;
+}
