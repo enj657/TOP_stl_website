@@ -5,15 +5,28 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.top, footer, .signup {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)) no-repeat fixed, 
+                url(images/downtown_from_plane.jpg) no-repeat center center fixed;
+    background-size: cover; 
+    color: #f9faf8;
+}
+
+.nav-fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
 .nav {
     display: flex;
     flex-flow: row nowrap;
-    background-color: #1F2937;
-    color: #eee;
-    justify-content: space-between;
+    background-color: #101a24;
+    /* color:#cd807e; */
+    justify-content: space-around;
     align-items: flex-start;
-    padding: 0 64px;
-    /* flex: 1; */
+    
+    width: 100%;
 }
 
 .header-logo {
@@ -28,11 +41,11 @@ body {
     font-weight: 500;
 }
 
-a {
+li a {
     color: #E5E7EB;
     text-decoration: none;
     padding-left: 15px;
-  }
+}
 
 ul {
     list-style: none;
@@ -45,41 +58,38 @@ ul {
     min-height: 300px;
     justify-content: space-between;
     flex-grow: 1;
-    padding: 0 64px;
-    /* gap: 20px; */
+    padding: 200px 10% 140px;
+
 }
 
 .top-left {
     display: flex;
     flex-flow: column wrap;
-    width: 65%;
-    /* padding: 0 64px; */
+    max-width: 420px;
     min-height: 300px;
-    flex-shrink: 1;
-    justify-content: center;
-}
-
-.top-right {
-    display: flex;
-    width: 300px;
-    /* padding: 0 64px; */
-    justify-content: flex-end;
-    max-height: 300px;
-    flex: 1;
+    flex-grow: 1;
+    justify-content: space-around;
+    gap: 8px;
 }
 
 button {
-    width: 100px;
-    padding: 8px;
-    background-color: #3882f6;
+    background-color: #0e1d2b;
     color: #eee;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: 10px 0;
     box-shadow: none;
 }
 
 .header-button {
-    border: none;
+    border: #cc807e 2px solid;
+    padding: 15px 20px;
+    width: 150px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    background-color: #cd807e;
 }
 
 .header {
@@ -87,7 +97,6 @@ button {
     font-weight: 900;
     color: #F9FAF8;
     margin: 0;
-    flex-shrink: 1;
 }
 
 h4 {
@@ -96,25 +105,29 @@ h4 {
     font-weight: 500;
 }
 
-.hero-img {
-    height: 60%;
-    align-self: center;
-    border-radius: 5px;
-}
-
 .content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-flow: column;
+    padding: 60px 10%;
+    background-image: linear-gradient(#0e1d2b, #070f16);
+    background-color: #0e1d2b;
+    color: #eee;
+    box-shadow: 0px 0px 25px 0px #cd807e;
+}
+
+.content h2 {
+    align-self: center;
     padding: 15px;
-    /* flex: 1; */
+    margin: 0 0 60px 0;
+    background-color: #cd807e;
+    border-radius: 15px;
+    color: #0e1d2b;
 }
 
 .images {
     display: flex;
-    flex-flow: row nowrap;
-    gap: 30px;
+    flex-flow: row wrap;
+    gap: 25px;
     justify-content: space-around;
     align-items: center;
     flex-grow: 1;
@@ -123,22 +136,25 @@ h4 {
 }
 
 .img-desc {
-    max-width: 160px;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    flex-shrink: 1;
-    /* gap: 20px; */
+}
+
+.img-desc .img:hover {
+    transform:scale(1.05);
+    border: #cd807e 2px solid;
+    border-radius: 5px;
 }
 
 .img {
-    width: 110px;
-    height: 110px;
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    border: #3882f6 solid 2px;
+    width: 256px;
+    height: 256px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: #eee solid 2px;
     border-radius: 5px;
 }
 
@@ -161,9 +177,10 @@ h4 {
 .img-desc span {
     color: #919191;
     font-size: 18px;
-    width: 110px;
+    width: 250px;
+    height: 80px;
     text-align: center;
-    padding: 8px;
+    padding: 20px 0 0 0;
 }
 
 .quote {
@@ -171,8 +188,9 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px 110px;
-    
+    padding: 100px 25%;
+    background-color: #b7b7b7;
+
 }
 
 .quote p {
@@ -182,12 +200,12 @@ h4 {
     color: #1F2937;
     flex-shrink: 1;
     margin: 0;
-    
+
 }
 
 .quote span {
     font-size: 18px;
-    align-self:flex-end;
+    align-self: flex-end;
     font-weight: 500;
     color: #1F2937;
     flex-shrink: 1;
@@ -196,38 +214,120 @@ h4 {
 
 .signup {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     color: #eee;
     min-height: 250px;
+    
 }
 
 .signup-box {
     width: 85%;
-    background-color: #3882f6;
+    background-color: #cc807e;
     border-radius: 5px;
     margin: 20px;
     padding: 30px 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 15px;
 }
 
-.signup-left h3{
+.signup-left h3 {
     margin: 0;
     font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.signup-left h4 {
+    max-width: 400px;
 }
 
 .signup-button {
     border: #eee 2px solid;
     justify-self: flex-end;
+    padding: 8px 12px;
+    width: 140px;
+    background-color: #cc807e;
+    
+}
+
+.signup-button:hover {
+    background-color: #0e1d2b;
+    cursor: pointer;
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 0 40px 40px 40px;
     background-color: #1F2937;
     color: #eee;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media screen and (max-width: 940px) {
+
+    .images {
+        flex-flow: row wrap;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .top {
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: #1F2937;
+        color: #eee;
+        min-height: 300px;
+        justify-content: center;
+        align-items: center;
+        /* flex-grow: 1; */
+        padding: 100px 64px;
+        text-align: center;
+
+    }
+
+    .header {
+        width: 85%;
+        align-self: center;
+        margin-bottom: 8px;
+    }
+
+    .top-left {
+        display: flex;
+        flex-flow: column nowrap;
+        /* justify-content: center; */
+        /* align-self: center; */
+        /* flex-grow: 1; */
+        max-width: 500px;
+        gap: 8px;
+    }
+
+    .header-button {
+        align-self: center;
+    }
+
+    .top-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 500px;
+        flex: 1;
+        width: 100%;
+        padding-bottom: 30px;
+
+    }
+
+    .hero-img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .images {
+        flex-flow: row wrap;
+    }
 }
